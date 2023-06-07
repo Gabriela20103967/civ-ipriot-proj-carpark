@@ -67,7 +67,7 @@ class CarPark(mqtt_device.MqttDevice):
 
 
 if __name__ == '__main__':
-    config = {'name': "raf-park",
+    config = {'name': "gabby-park",
               'total-spaces': 130,
               'total-cars': 0,
               'location': 'L306',
@@ -78,6 +78,7 @@ if __name__ == '__main__':
               'is_stuff': False
               }
     # TODO: Read config from file
+
     car_park = CarPark(config)
     print("Carpark initialized")
     print("Carpark initialized")

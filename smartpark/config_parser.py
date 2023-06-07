@@ -30,10 +30,17 @@ Finally, you can use `yaml` if you prefer.
 
 
 """
-
+import json
 
 
 def parse_config(config: dict) -> dict:
     """Parse the config file and return the values as a dictionary"""
     # TODO: get the configuration from a parsed file
-    return {'location': 'TBD', 'total_spaces': 0, 'broker_host': 'TBD', 'broker_port': 0}
+    path="../samples_and_snippets/config.json"
+    file_handle= open(path,"r")
+    config= json.load(file_handle.read())
+    file_handle.close()
+    return {'location': 'TBD',
+            'total_spaces': 0,
+            'broker_host': 'TBD',
+            'broker_port': 0}
